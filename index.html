@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/3d1a7c9cf1.js" crossorigin="anonymous"></script>
+    <title>Movie Joa</title>
+
+    <script>
+        function search() {
+            // 입력 필드에서 값을 가져옴
+            const searchText = document.getElementById('searchInput').value;
+
+            // 검색어가 있나 체크
+            if (searchText) {
+                // 검색어를 쿼리 파라미터로 추가하여 다른 페이지로 이동
+                window.location.href = `search.html?query=${encodeURIComponent(searchText)}`;
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="search-container">
+        <h1>Movie Joa</h1>
+
+        <form class="search" action="" method="get">
+            <input class="search__txt" id="searchInput" type="text" placeholder="Search..." />
+            <button class="search__btn" type="button" onclick="search()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+    </div>
+</body>
+
+</html>
